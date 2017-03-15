@@ -17,6 +17,7 @@ public class Delete
     {
         // initialise instance variables
         x = 0;
+        //more stuff
     }
 
     /**
