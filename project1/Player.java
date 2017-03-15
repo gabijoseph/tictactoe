@@ -1,23 +1,22 @@
 
 /**
- * Write a description of class Delete here.
+ * Write a description of class Player here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Delete
+public class Player
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Delete
+     * Constructor for objects of class Player
      */
-    public Delete()
+    public Player()
     {
         // initialise instance variables
         x = 0;
-        //more stuff
     }
 
     /**
