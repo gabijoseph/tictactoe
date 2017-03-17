@@ -7,7 +7,7 @@ public class CPU
       
     } */
     public void place(int box){
-        box = placement;
+        //box = placement;
         
     }
 }

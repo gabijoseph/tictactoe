@@ -6,7 +6,6 @@ public class TicTacToeDrive
        Player p2 = new Player();
        
        game.start();
-        
        
     }
 }
