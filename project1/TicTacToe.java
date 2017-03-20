@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class TicTacToe
 {
    private String[][] board = new String[3][3];
-   public String type1;
-   public String type2;
+   //public String type1;
+   //public String type2;
    public int placement;
    Scanner scan = new Scanner(System.in);
    
-   public void start(){
+   /*public void start(){
     makeBoard();
     System.out.println("PLAYER 1 -- X or O?: ");
     type1 = scan.next();
@@ -22,8 +22,24 @@ public class TicTacToe
            else {
            type2 = "X";
         }
-    }
+    }*/
     
+   public void start(){
+       int boxContent = 1;
+       for (int row = 0; row < 3; row++){
+           for ( int col = 0; col < 3; col++){
+               board[row][col] = "___" + boxContent +"___";
+               boxContent++;
+            }
+        }
+       for (int row = 0; row < 3; row++){
+           System.out.print("|");
+           for ( int col = 0; col < 3; col++){
+             System.out.print(board[row][col] + "|");
+            }
+           System.out.println();
+        }
+    }
    public void makeBoard(){
        int boxContent = 1;
        for (int row = 0; row < 3; row++){
@@ -33,8 +49,9 @@ public class TicTacToe
             }
         }
        for (int row = 0; row < 3; row++){
+           System.out.print("|");
            for ( int col = 0; col < 3; col++){
-             System.out.print(board[row][col] + " | ");
+             System.out.print(board[row][col] + "|");
             }
            System.out.println();
         }
