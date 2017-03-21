@@ -3,7 +3,7 @@
 import java.util.Scanner;
 public class TicTacToe
 {
-   private String[][] board = new String[3][3];
+   public String[][] board = new String[3][3];
    //public String type1;
    //public String type2;
    public int placement;
@@ -47,6 +47,27 @@ public class TicTacToe
                board[row][col] = "___" + boxContent +"___";
                boxContent++;
             }
+        }
+       for (int row = 0; row < 3; row++){
+           System.out.print("|");
+           for ( int col = 0; col < 3; col++){
+             System.out.print(board[row][col] + "|");
+            }
+           System.out.println();
+        }
+    }
+   public void makeBoard(Player one,int p){
+       int boxContent = 1;
+       for (int row = 0; row < 3; row++){
+           for ( int col = 0; col < 3; col++){
+               if (p == boxContent){
+                   board[row][col] = "___" + one.getType() + "___";
+                }
+               else{
+                   board[row][col] = "___" + boxContent +"___";
+                   boxContent++;
+                }
+           }
         }
        for (int row = 0; row < 3; row++){
            System.out.print("|");
