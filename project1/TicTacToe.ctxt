@@ -1,9 +1,15 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ start()
-comment0.text=public\ void\ start(){\r\n\ \ \ \ makeBoard();\r\n\ \ \ \ System.out.println("PLAYER\ 1\ --\ X\ or\ O?\:\ ");\r\n\ \ \ \ type1\ \=\ scan.next();\r\n\ \ \ \ setType2();\r\n\ \ \ \ }\r\n\ \ \ public\ void\ setType2(){\r\n\ \ \ \ \ \ \ if\ (type1\ \=\=\ "X"||\ type1\ \=\=\ "x"){\r\n\ \ \ \ \ \ \ \ \ \ \ type2\ \=\ "O";\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ else\ {\r\n\ \ \ \ \ \ \ \ \ \ \ type2\ \=\ "X";\r\n\ \ \ \ \ \ \ \ }\r\n}
 comment1.params=
 comment1.target=void\ makeBoard()
 comment2.params=one\ p
 comment2.target=void\ makeBoard(Player,\ int)
-numComments=3
+comment3.params=
+comment3.target=int\ getPlacement()
+comment3.text=public\ void\ progress(Player\ first,\ Player\ second){\r\n\ \ \ \ \ \ \ makeBoard(\r\n}
+comment4.params=i
+comment4.target=void\ setPlacement(int)
+comment5.params=p
+comment5.target=void\ move(Player)
+numComments=6

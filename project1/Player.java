@@ -1,14 +1,14 @@
-
+import java.util.Scanner;
 public class Player
 {
+    Scanner scan = new Scanner(System.in);
     String type;
     public Player(){
         //
     }
-    public void move (){
-       System.out.println("PLAYER 2 -- Type box number of move: ");
-       //placement = scan.nextInt();
-    }
+    /*public void move (){
+       //
+    }*/
     public void setType(String s){
         type = s;
     }
