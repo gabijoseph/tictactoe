@@ -1,5 +1,11 @@
 // https://www.codeproject.com/Articles/778260/AI-based-Tic-Tac-Toe
-
+//
+//
+//
+//THIS IS THE ONE THAT IS SYNCED TO GITHUB DESKTOP
+//
+//
+//
 import java.util.Scanner;
 public class TicTacToe
 {
@@ -8,6 +14,7 @@ public class TicTacToe
    //public String type2;
    public int placement;
    Scanner scan = new Scanner(System.in);
+   public boolean won = false;
     
    public void start(){
        int boxContent = 1;
@@ -25,6 +32,7 @@ public class TicTacToe
            System.out.println();
         }
     }
+    
    public void makeBoard(){
        int boxContent = 1;
        for (int row = 0; row < 3; row++){
@@ -41,23 +49,24 @@ public class TicTacToe
            System.out.println();
         }
     }
+    
    public void makeBoard(Player one,int p){
        int boxContent = 1;
        for (int row = 0; row < 3; row++){
            for ( int col = 0; col < 3; col++){
-               if (board[row][col].equals("X") || board[row][col].equals("O")){
-               if (p == boxContent){
-                   board[row][col] = "___" + one.getType() + "___";
+               if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
                    boxContent++;
                 }
                else{
+                   if (p == boxContent){
+                   board[row][col] = "___" + one.getType() + "___";
+                   boxContent++;
+                 }
+                    else{
                    board[row][col] = "___" + boxContent +"___";
                    boxContent++;
-                }
-            }
-            else{
-                //
-            }
+                 }
+              }
            }
         }
        for (int row = 0; row < 3; row++){
@@ -68,23 +77,62 @@ public class TicTacToe
            System.out.println();
         }
     }
-   /*public void progress(Player first, Player second){
-       makeBoard(
-    }*/
+    
    public int getPlacement(){
        return placement;
     }
+    
    public void setPlacement(int i){
        placement = i;
     }
+    
    public void move(Player p){
-       System.out.println("PLAYER 2 -- Enter position number of move: ");
+       System.out.println(p.getName() + " -- Enter position number of move: ");
        placement = scan.nextInt();
        if (placement < 1 || placement > 9){
            System.out.println("OUT OF BOUNDS! Enter between 1 and 9: ");
            placement = scan.nextInt();
         }
     }
+    
+   public void win(Player p){
+           for (int j = 0; j < 3; j++){
+               if (board[0][j].equals(board[1][j]) && board[1][j].equals(board[2][j])){
+                   if (board[0][j].equals(p.getType())){
+                   System.out.println("CONGRATS, " + p.getName() + "! YOU'VE WON.");
+                   won = true;
+                  }
+               }
+            }
+           for (int j = 0; j < 3; j++){
+               if (board[j][0].equals(board[j][1]) && board[j][1].equals(board[j][2])){
+                   if (board[j][0].equals(p.getType())){
+                   System.out.println("CONGRATS, " + p.getName() + "! YOU'VE WON.");
+                   won = true;
+                  }
+                }
+            }
+           if (board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])){
+               if (board[0][0].equals(p.getType())){
+                   System.out.println("CONGRATS, " + p.getName() + "! YOU'VE WON.");
+                   won = true;
+                  }
+            }
+           if (board[0][2].equals(board[1][1]) && board[1][1].equals(board[2][0])){
+               if (board[0][2].equals(p.getType())){
+                   System.out.println("CONGRATS, " + p.getName() + "! YOU'VE WON.");
+                   won = true;
+                  }
+            }
+   }
+   
+   //is the problem here?
+   public void progress(Player p, int place){
+       move(p);
+       makeBoard(p, place);
+       win(p);
+    }
+   
 }
 
 
