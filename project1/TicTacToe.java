@@ -52,6 +52,7 @@ public class TicTacToe
     
    public void makeBoard(Player one,int p){
        int boxContent = 1;
+       int newP;
        for (int row = 0; row < 3; row++){
            for ( int col = 0; col < 3; col++){
                if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
@@ -59,8 +60,18 @@ public class TicTacToe
                 }
                else{
                    if (p == boxContent){
-                   board[row][col] = "___" + one.getType() + "___";
-                   boxContent++;
+                   //this doesn't work. need to figure out how to check if the box is full. maybe move it up?
+                   /*
+                   if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
+                       System.out.println("POSITION FULL. Please choose another: ");
+                       newP = scan.nextInt();
+                       makeBoard(one, newP);
+                   }
+                   else{
+                       board[row][col] = "___" + one.getType() + "___";
+                       boxContent++;
+                    }
+                    */
                  }
                     else{
                    board[row][col] = "___" + boxContent +"___";
@@ -96,6 +107,7 @@ public class TicTacToe
     }
     
    public void win(Player p){
+            //checks for row wins
            for (int j = 0; j < 3; j++){
                if (board[0][j].equals(board[1][j]) && board[1][j].equals(board[2][j])){
                    if (board[0][j].equals(p.getType())){
@@ -104,6 +116,7 @@ public class TicTacToe
                   }
                }
             }
+            // checks for column wins
            for (int j = 0; j < 3; j++){
                if (board[j][0].equals(board[j][1]) && board[j][1].equals(board[j][2])){
                    if (board[j][0].equals(p.getType())){
@@ -112,6 +125,7 @@ public class TicTacToe
                   }
                 }
             }
+            //checks for diagonal wins
            if (board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])){
                if (board[0][0].equals(p.getType())){
                    System.out.println("CONGRATS, " + p.getName() + "! YOU'VE WON.");
@@ -126,11 +140,8 @@ public class TicTacToe
             }
    }
    
-   //is the problem here?
-   public void progress(Player p, int place){
-       move(p);
-       makeBoard(p, place);
-       win(p);
+   public void quit(){
+       System.out.println("GAME OVER");
     }
    
 }

@@ -35,27 +35,26 @@ public class TicTacToeDrive
        
        
        //somethings wrong here
-       while (game.won == false){
+       /*while (game.won == false){
            game.progress(p2, game.getPlacement());
            game.progress(p1, game.getPlacement());
         }
-       /*game.move(p2);
-       game.makeBoard(p2, game.getPlacement());
-       
-       game.move(p1);
-       game.makeBoard(p1, game.getPlacement());
-       
+        */
+       for (int i = 0; i < 2; i++){
+           game.move(p2);
+           game.makeBoard(p2, game.getPlacement());
+           game.move(p1);
+           game.makeBoard(p1, game.getPlacement());
+        }
+        
        game.move(p2);
        game.makeBoard(p2, game.getPlacement());
+       game.win(p2);
        game.move(p1);
        game.makeBoard(p1, game.getPlacement());
+       game.win(p1);
        
-       game.move(p2);
-       game.makeBoard(p2, game.getPlacement());
-       game.move(p1);
-       game.makeBoard(p1, game.getPlacement());
-       */
-
+       game.quit();
     }
+  }
 
-}
