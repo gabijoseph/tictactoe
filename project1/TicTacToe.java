@@ -55,14 +55,15 @@ public class TicTacToe
        int newP;
        for (int row = 0; row < 3; row++){
            for ( int col = 0; col < 3; col++){
-               if ((board[row][col].equals("___X___") || board[row][col].equals("___O___")) & p == boxContent){
+              if ((board[row][col].equals("___X___") || board[row][col].equals("___O___")) && p == boxContent){
                        System.out.println("POSITION FULL. Please choose another: ");
                        newP = scan.nextInt();
                        makeBoard(one, newP);
                        //
-                       //somehow this prints a second weird double board after choosing a free position, then prints regualr board...
+                       //somehow this prints a second weird double board after choosing a free position, then prints regular board...
                        //
                 }
+              
                else if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
                    boxContent++;
                 }
@@ -78,7 +79,11 @@ public class TicTacToe
               }
            }
         }
-       for (int row = 0; row < 3; row++){
+       printBoard();
+    }
+   
+   public void printBoard(){
+        for (int row = 0; row < 3; row++){
            System.out.print("|");
            for ( int col = 0; col < 3; col++){
              System.out.print(board[row][col] + "|");
