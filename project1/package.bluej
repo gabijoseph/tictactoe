@@ -9,11 +9,16 @@ dependency3.from=TicTacToe
 dependency3.to=Player
 dependency3.type=UsesDependency
 objectbench.height=76
-objectbench.width=658
+objectbench.width=668
 package.editor.height=400
 package.editor.width=560
+<<<<<<< Updated upstream
 package.editor.x=48
 package.editor.y=31
+=======
+package.editor.x=451
+package.editor.y=152
+>>>>>>> Stashed changes
 package.numDependencies=3
 package.numTargets=4
 package.showExtends=true
@@ -22,7 +27,7 @@ project.charset=UTF-8
 target1.editor.height=700
 target1.editor.width=900
 target1.editor.x=144
-target1.editor.y=226
+target1.editor.y=144
 target1.height=50
 target1.name=Player
 target1.naviview.expanded=true
@@ -32,10 +37,17 @@ target1.typeParameters=
 target1.width=80
 target1.x=380
 target1.y=10
+<<<<<<< Updated upstream
 target2.editor.height=993
 target2.editor.width=1171
 target2.editor.x=364
 target2.editor.y=13
+=======
+target2.editor.height=700
+target2.editor.width=900
+target2.editor.x=150
+target2.editor.y=239
+>>>>>>> Stashed changes
 target2.height=50
 target2.name=TicTacToe
 target2.naviview.expanded=true
@@ -45,10 +57,17 @@ target2.typeParameters=
 target2.width=80
 target2.x=160
 target2.y=60
+<<<<<<< Updated upstream
 target3.editor.height=853
 target3.editor.width=851
 target3.editor.x=1124
 target3.editor.y=1
+=======
+target3.editor.height=815
+target3.editor.width=900
+target3.editor.x=873
+target3.editor.y=23
+>>>>>>> Stashed changes
 target3.height=50
 target3.name=TicTacToeDrive
 target3.naviview.expanded=true
@@ -57,7 +76,7 @@ target3.type=ClassTarget
 target3.typeParameters=
 target3.width=110
 target3.x=270
-target3.y=200
+target3.y=270
 target4.editor.height=780
 target4.editor.width=1026
 target4.editor.x=49
