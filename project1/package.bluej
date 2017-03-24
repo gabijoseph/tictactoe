@@ -12,13 +12,8 @@ objectbench.height=76
 objectbench.width=668
 package.editor.height=400
 package.editor.width=560
-<<<<<<< Updated upstream
-package.editor.x=48
-package.editor.y=31
-=======
-package.editor.x=451
-package.editor.y=152
->>>>>>> Stashed changes
+package.editor.x=247
+package.editor.y=190
 package.numDependencies=3
 package.numTargets=4
 package.showExtends=true
@@ -37,17 +32,10 @@ target1.typeParameters=
 target1.width=80
 target1.x=380
 target1.y=10
-<<<<<<< Updated upstream
-target2.editor.height=993
-target2.editor.width=1171
-target2.editor.x=364
-target2.editor.y=13
-=======
 target2.editor.height=700
 target2.editor.width=900
-target2.editor.x=150
-target2.editor.y=239
->>>>>>> Stashed changes
+target2.editor.x=143
+target2.editor.y=262
 target2.height=50
 target2.name=TicTacToe
 target2.naviview.expanded=true
@@ -57,17 +45,10 @@ target2.typeParameters=
 target2.width=80
 target2.x=160
 target2.y=60
-<<<<<<< Updated upstream
-target3.editor.height=853
-target3.editor.width=851
-target3.editor.x=1124
-target3.editor.y=1
-=======
 target3.editor.height=815
 target3.editor.width=900
-target3.editor.x=873
+target3.editor.x=540
 target3.editor.y=23
->>>>>>> Stashed changes
 target3.height=50
 target3.name=TicTacToeDrive
 target3.naviview.expanded=true

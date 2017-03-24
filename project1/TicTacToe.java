@@ -55,23 +55,21 @@ public class TicTacToe
        int newP;
        for (int row = 0; row < 3; row++){
            for ( int col = 0; col < 3; col++){
-               if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
+               if ((board[row][col].equals("___X___") || board[row][col].equals("___O___")) & p == boxContent){
+                       System.out.println("POSITION FULL. Please choose another: ");
+                       newP = scan.nextInt();
+                       makeBoard(one, newP);
+                       //
+                       //somehow this prints a second weird double board after choosing a free position, then prints regualr board...
+                       //
+                }
+               else if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
                    boxContent++;
                 }
                else{
                    if (p == boxContent){
-                   //this doesn't work. need to figure out how to check if the box is full. maybe move it up?
-                   /*
-                   if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
-                       System.out.println("POSITION FULL. Please choose another: ");
-                       newP = scan.nextInt();
-                       makeBoard(one, newP);
-                   }
-                   else{
                        board[row][col] = "___" + one.getType() + "___";
                        boxContent++;
-                    }
-                    */
                  }
                     else{
                    board[row][col] = "___" + boxContent +"___";
