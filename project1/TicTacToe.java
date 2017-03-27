@@ -15,6 +15,7 @@ public class TicTacToe
    public int placement;
    Scanner scan = new Scanner(System.in);
    public boolean won = false;
+   ArrayList<int> boxes = new ArrayList<int>
     
    public void start(){
        int boxContent = 1;
@@ -27,7 +28,7 @@ public class TicTacToe
        for (int row = 0; row < 3; row++){
            System.out.print("|");
            for ( int col = 0; col < 3; col++){
-             System.out.print(board[row][col] + "|");
+             System.out.print(board[ow][col]
             }
            System.out.println();
         }
@@ -38,7 +39,9 @@ public class TicTacToe
        for (int row = 0; row < 3; row++){
            for ( int col = 0; col < 3; col++){
                board[row][col] = "___" + boxContent +"___";
+               boxes.add(boxContent);
                boxContent++;
+               
             }
         }
        for (int row = 0; row < 3; row++){
@@ -53,15 +56,27 @@ public class TicTacToe
    public void makeBoard(Player one,int p){
        int boxContent = 1;
        int newP;
+       
+       boolean validChoice = false;
+       
+       while (!validChoice) {
+           for(int i = 0; i < boxes.size(); i+=) {
+               if(p ==boxes.get(i)) {
+                   validChoice = true;
+                   boxes.remove(i);
+                   break;
+                }
+                else {
+                    
+                } 
+            }
+        }
        for (int row = 0; row < 3; row++){
            for ( int col = 0; col < 3; col++){
-              if ((board[row][col].equals("___X___") || board[row][col].equals("___O___")) && p == boxContent){
+              if (((board[row][col].equals("___X___") && p == boxContent) || (board[row][col].equals("___O___")&& p == boxContent))){
                        System.out.println("POSITION FULL. Please choose another: ");
-                       newP = scan.nextInt();
-                       makeBoard(one, newP);
-                       //
-                       //somehow this prints a second weird double board after choosing a free position, then prints regular board...
-                       //
+                       p = scan.nextInt();
+                       makeBoard(one, p);
                 }
               
                else if (board[row][col].equals("___X___") || board[row][col].equals("___O___")){
